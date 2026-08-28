@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Aarti Thali & Blessings 🪔 — Raksha Bandhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="garland-header"></div>
+  <canvas id="bgCanvas"></canvas>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand"><span>🪢</span> Raksha Bandhan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+      <li><a href="rakhi.html" class="nav-link">🪢 Rakhi</a></li>
+      <li><a href="aarti.html" class="nav-link active">🪔 Aarti</a></li>
+      <li><a href="sweets.html" class="nav-link">🍬 Sweets</a></li>
+      <li><a href="gift.html" class="nav-link">🎁 Gift</a></li>
+    </ul>
+
+    <div class="nav-page-controls">
+      <a href="rakhi.html" class="page-step-btn">← Prev</a>
+      <a href="sweets.html" class="page-step-btn">Next →</a>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="rakhi.html" class="nav-link">🪢 Rakhi Studio</a>
+    <a href="aarti.html" class="nav-link active">🪔 Rotating Aarti</a>
+    <a href="sweets.html" class="nav-link">🍬 Mithai Plate</a>
+    <a href="gift.html" class="nav-link">🎁 Gift Unboxing</a>
+  </div>
+
+  <main class="main-content">
+    <h1 class="festive-title">Aarti & Blessings 🪔</h1>
+    <p class="festive-subtitle">"Let the light of love and blessings fill our celebration."</p>
+
+    <!-- Aarti Orbital Stage Area -->
+    <div class="aarti-stage">
+      <div class="thali-orbital-path">
+        <!-- Rotating Thali Object -->
+        <div class="aarti-thali-wrapper orbiting" id="aartiThaliWrapper" title="Click Diya for blessings or drag thali around!">
+          <img src="aarti-thali.svg" alt="Rotating Aarti Thali with Diya and Flowers" class="aarti-thali-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Aarti Interactive Controls Bar -->
+    <div class="aarti-controls-bar">
+      <button class="ctrl-btn" id="btnPauseAarti">⏸ Pause Aarti</button>
+      <button class="ctrl-btn" id="btnResumeAarti">▶ Resume Aarti</button>
+      <button class="ctrl-btn" id="btnSlowAarti">🐢 Slow</button>
+      <button class="ctrl-btn" id="btnFastAarti">⚡ Fast</button>
+    </div>
+
+    <!-- Main Start Aarti Button -->
+    <div style="margin-top: 25px; text-align: center;">
+      <button class="btn-festive" id="startAartiBtn">
+        <span>Start Aarti 🪔</span>
+      </button>
+    </div>
+
+    <!-- Aarti Blessing Message Banner -->
+    <div class="aarti-blessing-banner" id="aartiBlessingBanner">
+      <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.8rem; margin-bottom: 10px;">
+        Divine Raksha Bandhan Aarti 🙏
+      </h3>
+      <p style="font-size: 1.15rem; color: var(--cream); line-height: 1.7; font-style: italic;">
+        "May this sacred bond always remain filled with love, happiness, protection and blessings. May light always illuminate your path. 🙏✨"
+      </p>
+      <a href="sweets.html" class="btn-festive" style="margin-top: 20px; font-size: 1rem; padding: 12px 28px;">
+        Have Some Sweets →
+      </a>
+    </div>
+
+    <!-- Bottom Page Navigation -->
+    <div class="bottom-page-nav">
+      <a href="rakhi.html" class="btn-secondary">← Back to Rakhi</a>
+      <span>Page 3 of 5</span>
+      <a href="sweets.html" class="btn-festive" style="padding: 12px 28px; font-size: 1rem;">
+        Enjoy Mithai Time →
+      </a>
+    </div>
+  </main>
+
+  <div class="music-player-widget">
+    <div class="music-disc" id="musicDisc">🎵</div>
+    <div class="music-info">
+      <div class="music-title">Raksha Bandhan Melody</div>
+      <div class="music-waves">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+    </div>
+    <button class="play-toggle-btn" id="playToggleBtn">▶</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+  </div>
+
+  <audio id="bgAudio" src="rakhi-song.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

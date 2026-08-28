@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Rakhi Studio 🪢 — Happy Raksha Bandhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="garland-header"></div>
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand"><span>🪢</span> Raksha Bandhan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+      <li><a href="rakhi.html" class="nav-link active">🪢 Rakhi</a></li>
+      <li><a href="aarti.html" class="nav-link">🪔 Aarti</a></li>
+      <li><a href="sweets.html" class="nav-link">🍬 Sweets</a></li>
+      <li><a href="gift.html" class="nav-link">🎁 Gift</a></li>
+    </ul>
+
+    <div class="nav-page-controls">
+      <a href="index.html" class="page-step-btn">← Prev</a>
+      <a href="aarti.html" class="page-step-btn">Next →</a>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="rakhi.html" class="nav-link active">🪢 Rakhi Studio</a>
+    <a href="aarti.html" class="nav-link">🪔 Rotating Aarti</a>
+    <a href="sweets.html" class="nav-link">🍬 Mithai Plate</a>
+    <a href="gift.html" class="nav-link">🎁 Gift Unboxing</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1 class="festive-title">Choose the Perfect Rakhi 🪢</h1>
+    <p class="festive-subtitle">"Every Rakhi carries a story, a promise and lots of love."</p>
+
+    <!-- 8 Rakhi Selection Cards Grid -->
+    <div class="rakhi-carousel-container">
+      <div class="rakhi-grid">
+
+        <div class="rakhi-card selected" data-img="rakhi-1.svg" data-title="Royal Gold Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-1.svg" alt="Royal Gold Rakhi">
+          </div>
+          <div class="rakhi-title">Royal Gold Rakhi</div>
+          <div class="rakhi-desc">Empowered with golden floral medallion & ruby crystals.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-2.svg" data-title="Traditional Red Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-2.svg" alt="Traditional Red Rakhi">
+          </div>
+          <div class="rakhi-title">Traditional Red Rakhi</div>
+          <div class="rakhi-desc">Sacred maroon mandala filigree with silk thread tassel.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-3.svg" data-title="Pearl Elegance Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-3.svg" alt="Pearl Elegance Rakhi">
+          </div>
+          <div class="rakhi-title">Pearl Elegance Rakhi</div>
+          <div class="rakhi-desc">Adorned with concentric pearls & central emerald jewel.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-4.svg" data-title="Kundan Craft Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-4.svg" alt="Kundan Craft Rakhi">
+          </div>
+          <div class="rakhi-title">Kundan Craft Rakhi</div>
+          <div class="rakhi-desc">Handcrafted royal Kundan pattern with sparkling stones.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-5.svg" data-title="Floral Bloom Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-5.svg" alt="Floral Bloom Rakhi">
+          </div>
+          <div class="rakhi-title">Floral Bloom Rakhi</div>
+          <div class="rakhi-desc">Delicate pink lotus petals with golden stamen.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-6.svg" data-title="Designer Velvet Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-6.svg" alt="Designer Velvet Rakhi">
+          </div>
+          <div class="rakhi-title">Designer Velvet Rakhi</div>
+          <div class="rakhi-desc">Royal blue velvet base with intricate gold zardozi.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-7.svg" data-title="Bhaiya Sacred Ganesha Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-7.svg" alt="Bhaiya Sacred Ganesha Rakhi">
+          </div>
+          <div class="rakhi-title">Sacred Ganesha Rakhi</div>
+          <div class="rakhi-desc">Golden Lord Ganesha emblem with sacred kalawa thread.</div>
+        </div>
+
+        <div class="rakhi-card" data-img="rakhi-8.svg" data-title="Love & Blessings Heart Rakhi">
+          <span class="selected-badge">Selected ❤️</span>
+          <div class="rakhi-img-wrapper">
+            <img src="rakhi-8.svg" alt="Love & Blessings Heart Rakhi">
+          </div>
+          <div class="rakhi-title">Love & Blessings Rakhi</div>
+          <div class="rakhi-desc">Double heart emblem symbolizing an unbreakable bond.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Rakhi Tying Studio Section -->
+    <div class="tying-section">
+      <h2 style="color: var(--gold-primary); font-family: var(--font-heading); margin-bottom: 10px;">Your Rakhi Selection ❤️</h2>
+      <p id="selectedRakhiTitle" style="color: var(--saffron); font-size: 1.3rem; font-weight: 600; margin-bottom: 15px;">Royal Gold Rakhi</p>
+
+      <div class="wrist-preview-area">
+        <div class="wrist-illustration"></div>
+        <img src="rakhi-1.svg" alt="Rakhi Preview" class="tying-rakhi-object" id="tyingRakhiObj">
+      </div>
+
+      <button class="btn-festive" id="tieRakhiBtn">
+        <span>Tie This Rakhi 🪢</span>
+      </button>
+
+      <div id="tieSuccessMsg" style="display: none; margin-top: 25px; animation: popIn 0.5s ease;">
+        <h3 style="color: var(--gold-primary); font-size: 1.8rem; font-family: var(--font-cursive);">Rakhi Tied Successfully! ❤️</h3>
+        <p style="color: var(--cream); margin-top: 8px;">"A thread of love, protection and endless memories."</p>
+        <a href="aarti.html" class="btn-festive" style="margin-top: 20px; font-size: 1rem; padding: 12px 28px;">
+          Proceed to Aarti →
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Page Navigation -->
+    <div class="bottom-page-nav">
+      <a href="index.html" class="btn-secondary">← Back to Greeting</a>
+      <span>Page 2 of 5</span>
+      <a href="aarti.html" class="btn-festive" style="padding: 12px 28px; font-size: 1rem;">
+        Start Rotating Aarti →
+      </a>
+    </div>
+  </main>
+
+  <!-- Music Controller -->
+  <div class="music-player-widget">
+    <div class="music-disc" id="musicDisc">🎵</div>
+    <div class="music-info">
+      <div class="music-title">Raksha Bandhan Melody</div>
+      <div class="music-waves">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+    </div>
+    <button class="play-toggle-btn" id="playToggleBtn">▶</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+  </div>
+
+  <audio id="bgAudio" src="rakhi-song.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

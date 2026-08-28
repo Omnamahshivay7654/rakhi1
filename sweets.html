@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithai Time! 🍬 — Raksha Bandhan Celebration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="garland-header"></div>
+  <canvas id="bgCanvas"></canvas>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand"><span>🪢</span> Raksha Bandhan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+      <li><a href="rakhi.html" class="nav-link">🪢 Rakhi</a></li>
+      <li><a href="aarti.html" class="nav-link">🪔 Aarti</a></li>
+      <li><a href="sweets.html" class="nav-link active">🍬 Sweets</a></li>
+      <li><a href="gift.html" class="nav-link">🎁 Gift</a></li>
+    </ul>
+
+    <div class="nav-page-controls">
+      <a href="aarti.html" class="page-step-btn">← Prev</a>
+      <a href="gift.html" class="page-step-btn">Next →</a>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="rakhi.html" class="nav-link">🪢 Rakhi Studio</a>
+    <a href="aarti.html" class="nav-link">🪔 Rotating Aarti</a>
+    <a href="sweets.html" class="nav-link active">🍬 Mithai Plate</a>
+    <a href="gift.html" class="nav-link">🎁 Gift Unboxing</a>
+  </div>
+
+  <main class="main-content">
+    <h1 class="festive-title">Mithai Time! 🍬</h1>
+    <p class="festive-subtitle">"Because Raksha Bandhan is incomplete without something sweet!"</p>
+
+    <!-- 6 Sweets Selection Grid -->
+    <div class="sweets-grid">
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="kaju-katli.svg" alt="Kaju Katli">
+        </div>
+        <div class="sweet-name">Kaju Katli</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="gulab-jamun.svg" alt="Gulab Jamun">
+        </div>
+        <div class="sweet-name">Gulab Jamun</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="rasgulla.svg" alt="Rasgulla">
+        </div>
+        <div class="sweet-name">Rasgulla</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="ladoo.svg" alt="Motichoor Ladoo">
+        </div>
+        <div class="sweet-name">Motichoor Ladoo</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="barfi.svg" alt="Pista Barfi">
+        </div>
+        <div class="sweet-name">Pista Barfi</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+      <div class="sweet-card">
+        <div class="sweet-img-box">
+          <img src="jalebi.svg" alt="Crispy Jalebi">
+        </div>
+        <div class="sweet-name">Crispy Jalebi</div>
+        <button class="btn-secondary add-sweet-btn">Add to Plate +</button>
+      </div>
+
+    </div>
+
+    <!-- Interactive Mithai Thali Plate Container -->
+    <div class="mithai-thali-container">
+      <h2 style="color: var(--gold-primary); font-family: var(--font-heading); margin-bottom: 8px;">Your Rakhi Mithai Plate 🍬</h2>
+      <div class="sweets-counter-badge" id="sweetsCountBadge">Sweets Added: 0 🍬</div>
+
+      <!-- Decorative Plate Target Area -->
+      <div class="decorative-plate" id="decorativePlate" title="Sweets will fly into this plate!">
+        <!-- Sweets dynamically fly here -->
+      </div>
+
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+        <button class="btn-secondary" id="clearPlateBtn">Clear Plate 🧹</button>
+        <button class="btn-festive" id="celebrateMithaiBtn">
+          <span>Celebrate with Mithai 🎉</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Page Navigation -->
+    <div class="bottom-page-nav">
+      <a href="aarti.html" class="btn-secondary">← Back to Aarti</a>
+      <span>Page 4 of 5</span>
+      <a href="gift.html" class="btn-festive" style="padding: 12px 28px; font-size: 1rem;">
+        Demand Your Gift →
+      </a>
+    </div>
+  </main>
+
+  <div class="music-player-widget">
+    <div class="music-disc" id="musicDisc">🎵</div>
+    <div class="music-info">
+      <div class="music-title">Raksha Bandhan Melody</div>
+      <div class="music-waves">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+    </div>
+    <button class="play-toggle-btn" id="playToggleBtn">▶</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+  </div>
+
+  <audio id="bgAudio" src="rakhi-song.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

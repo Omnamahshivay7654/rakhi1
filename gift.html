@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny Gift Demand 🎁 — Happy Raksha Bandhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="garland-header"></div>
+  <canvas id="bgCanvas"></canvas>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand"><span>🪢</span> Raksha Bandhan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+      <li><a href="rakhi.html" class="nav-link">🪢 Rakhi</a></li>
+      <li><a href="aarti.html" class="nav-link">🪔 Aarti</a></li>
+      <li><a href="sweets.html" class="nav-link">🍬 Sweets</a></li>
+      <li><a href="gift.html" class="nav-link active">🎁 Gift</a></li>
+    </ul>
+
+    <div class="nav-page-controls">
+      <a href="sweets.html" class="page-step-btn">← Prev</a>
+      <a href="index.html" class="page-step-btn">Home 🏠</a>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="rakhi.html" class="nav-link">🪢 Rakhi Studio</a>
+    <a href="aarti.html" class="nav-link">🪔 Rotating Aarti</a>
+    <a href="sweets.html" class="nav-link">🍬 Mithai Plate</a>
+    <a href="gift.html" class="nav-link active">🎁 Gift Unboxing</a>
+  </div>
+
+  <main class="main-content">
+    <h1 class="festive-title">Okay... Now Where Is My Gift? 😎🎁</h1>
+
+    <!-- Playful Festive Checklist -->
+    <div class="gift-checklist">
+      <span class="check-item">Rakhi Tied ✅</span>
+      <span class="check-item">Aarti Done ✅</span>
+      <span class="check-item">Mithai Eaten ✅</span>
+      <span class="check-item">Love Given ❤️</span>
+    </div>
+
+    <p class="festive-subtitle" style="margin-bottom: 25px;">
+      "So... WHERE IS MY GIFT? 😂 Choose your dream gift demand below!"
+    </p>
+
+    <!-- 8 Gift Options Selection Cards Grid -->
+    <div class="gift-grid">
+
+      <div class="gift-card selected" data-img="phone.svg" data-title="New Phone 📱">
+        <div class="gift-icon-box">
+          <img src="phone.svg" alt="New Phone">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">New Phone 📱</div>
+      </div>
+
+      <div class="gift-card" data-img="laptop.svg" data-title="Laptop 💻">
+        <div class="gift-icon-box">
+          <img src="laptop.svg" alt="Laptop">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Laptop 💻</div>
+      </div>
+
+      <div class="gift-card" data-img="headphones.svg" data-title="Headphones 🎧">
+        <div class="gift-icon-box">
+          <img src="headphones.svg" alt="Headphones">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Headphones 🎧</div>
+      </div>
+
+      <div class="gift-card" data-img="shopping.svg" data-title="Shopping Spree 👗">
+        <div class="gift-icon-box">
+          <img src="shopping.svg" alt="Shopping">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Shopping 👗</div>
+      </div>
+
+      <div class="gift-card" data-img="cash.svg" data-title="Cash / Envelope 💰">
+        <div class="gift-icon-box">
+          <img src="cash.svg" alt="Cash">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Cash 💰</div>
+      </div>
+
+      <div class="gift-card" data-img="chocolates.svg" data-title="Chocolates 🍫">
+        <div class="gift-icon-box">
+          <img src="chocolates.svg" alt="Chocolates">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Chocolates 🍫</div>
+      </div>
+
+      <div class="gift-card" data-img="trip.svg" data-title="Vacation Trip ✈️">
+        <div class="gift-icon-box">
+          <img src="trip.svg" alt="Trip">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Trip ✈️</div>
+      </div>
+
+      <div class="gift-card" data-img="surprise.svg" data-title="Surprise Gift 🎁">
+        <div class="gift-icon-box">
+          <img src="surprise.svg" alt="Surprise Gift">
+        </div>
+        <div style="color: var(--gold-primary); font-weight: 600;">Surprise Gift 🎁</div>
+      </div>
+
+    </div>
+
+    <!-- 3D Gift Box Unboxing Stage Area -->
+    <div class="unboxing-stage">
+      <h2 style="color: var(--gold-primary); font-family: var(--font-heading); margin-bottom: 10px;">Surprise Gift Box 🎁</h2>
+      <p style="color: var(--cream); font-size: 0.95rem;">Click the button to open your official gift demand!</p>
+
+      <div class="gift-box-wrapper" id="giftBoxWrapper">
+        <img src="gift-box.svg" alt="Animated 3D Gift Box" class="gift-box-img">
+      </div>
+
+      <button class="btn-festive" id="openGiftBtn">
+        <span>OPEN MY GIFT 🎁</span>
+      </button>
+
+      <!-- Revealed Gift Screen -->
+      <div class="revealed-gift-display" id="revealedGiftDisplay">
+        <img src="phone.svg" alt="Revealed Gift" class="revealed-gift-img" id="revealedGiftImg">
+        <h3 id="revealedGiftTitle" style="color: var(--gold-primary); font-size: 2rem; font-family: var(--font-cursive); margin-bottom: 10px;">New Phone 📱</h3>
+        
+        <p style="color: var(--saffron); font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">
+          "Your Gift Demand Has Been Officially Submitted! 😂🎁"
+        </p>
+        <p style="color: var(--cream); font-style: italic; line-height: 1.6; max-width: 500px; margin: 0 auto 20px;">
+          "Happy Raksha Bandhan ❤️<br>
+          The bond matters more than the gift...<br>
+          But the gift would still be appreciated! 😂🎁"
+        </p>
+        <a href="index.html" class="btn-festive">Replay Celebration 🏠</a>
+      </div>
+    </div>
+
+    <!-- Bottom Page Navigation -->
+    <div class="bottom-page-nav">
+      <a href="sweets.html" class="btn-secondary">← Back to Sweets</a>
+      <span>Page 5 of 5</span>
+      <a href="index.html" class="btn-festive" style="padding: 12px 28px; font-size: 1rem;">
+        Start Over 🏠
+      </a>
+    </div>
+  </main>
+
+  <div class="music-player-widget">
+    <div class="music-disc" id="musicDisc">🎵</div>
+    <div class="music-info">
+      <div class="music-title">Raksha Bandhan Melody</div>
+      <div class="music-waves">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+    </div>
+    <button class="play-toggle-btn" id="playToggleBtn">▶</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+  </div>
+
+  <audio id="bgAudio" src="rakhi-song.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

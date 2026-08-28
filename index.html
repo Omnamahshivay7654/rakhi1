@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Raksha Bandhan ❤️ — Premium Interactive Celebration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Decorative Garland -->
+  <div class="garland-header"></div>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span>🪢</span> Raksha Bandhan
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">🏠 Home</a></li>
+      <li><a href="rakhi.html" class="nav-link">🪢 Rakhi</a></li>
+      <li><a href="aarti.html" class="nav-link">🪔 Aarti</a></li>
+      <li><a href="sweets.html" class="nav-link">🍬 Sweets</a></li>
+      <li><a href="gift.html" class="nav-link">🎁 Gift</a></li>
+    </ul>
+
+    <div class="nav-page-controls">
+      <a href="rakhi.html" class="page-step-btn">Next Page →</a>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Hamburger Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="index.html" class="nav-link active">🏠 Home</a>
+    <a href="rakhi.html" class="nav-link">🪢 Rakhi Studio</a>
+    <a href="aarti.html" class="nav-link">🪔 Rotating Aarti</a>
+    <a href="sweets.html" class="nav-link">🍬 Mithai Plate</a>
+    <a href="gift.html" class="nav-link">🎁 Gift Unboxing</a>
+  </div>
+
+  <!-- Main Page Content -->
+  <main class="main-content">
+    <div class="hero-wrapper">
+      <h1 class="festive-title">Happy Raksha Bandhan ❤️</h1>
+      <p class="festive-subtitle">"A beautiful thread. An unbreakable bond. A lifetime of memories."</p>
+
+      <!-- Central Festive Illustration -->
+      <div class="hero-art-container">
+        <img src="brother-sister.svg" alt="Brother and Sister Raksha Bandhan Celebration" class="hero-art-img">
+      </div>
+
+      <!-- Interactive Surprise Wish Button -->
+      <button class="btn-festive" id="openWishBtn">
+        <span>Open My Rakhi Wish 💝</span>
+      </button>
+    </div>
+
+    <!-- Quick Page Step Navigation -->
+    <div class="bottom-page-nav">
+      <span>Page 1 of 5</span>
+      <a href="rakhi.html" class="btn-festive" style="padding: 12px 28px; font-size: 1rem;">
+        Choose Perfect Rakhi →
+      </a>
+    </div>
+  </main>
+
+  <!-- Wish Envelope Modal Overlay -->
+  <div class="wish-modal-overlay" id="wishModalOverlay">
+    <div class="envelope-card">
+      <div class="envelope-icon">💌</div>
+      <h2 style="color: var(--gold-primary); font-family: var(--font-heading); margin-bottom: 10px;">A Special Wish For You</h2>
+      <div class="letter-message">
+        "Dear Sister/Brother,<br><br>
+        No matter how much we fight, tease each other or annoy one another, our bond will always remain special. You are one of the most beautiful parts of my life. May you always stay happy, successful and blessed. ❤️"
+      </div>
+      <div class="letter-signature">With Lots of Love ❤️</div>
+      
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-secondary" id="closeWishBtn">Close Wish</button>
+        <a href="rakhi.html" class="btn-festive">Let's Celebrate Raksha Bandhan →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Audio Player Controller Widget -->
+  <div class="music-player-widget">
+    <div class="music-disc" id="musicDisc">🎵</div>
+    <div class="music-info">
+      <div class="music-title">Raksha Bandhan Melody</div>
+      <div class="music-waves">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+    </div>
+    <button class="play-toggle-btn" id="playToggleBtn">▶</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+  </div>
+
+  <!-- Background Music Audio Element -->
+  <audio id="bgAudio" src="rakhi-song.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

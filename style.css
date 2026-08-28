@@ -1,0 +1,1142 @@
+/* ==========================================================================
+   PREMIUM INDIAN FESTIVE RAKSHA BANDHAN DESIGN SYSTEM - STYLESHEET
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap');
+
+:root {
+  --bg-dark: #1F0508;
+  --bg-maroon: #4A0E17;
+  --bg-deep-red: #8B0000;
+  --gold-primary: #FFD700;
+  --gold-light: #FFE066;
+  --gold-dark: #DAA520;
+  --saffron: #FF9933;
+  --cream: #FFFDD0;
+  --pink-rose: #E85D75;
+  --dark-brown: #2C1609;
+
+  --gold-grad: linear-gradient(135deg, #FFE066 0%, #FFD700 50%, #DAA520 100%);
+  --maroon-grad: linear-gradient(135deg, #8B0000 0%, #4A0E17 50%, #1F0508 100%);
+  --saffron-grad: linear-gradient(135deg, #FF9933 0%, #FF6600 100%);
+
+  --glass-bg: rgba(74, 14, 23, 0.75);
+  --glass-border: rgba(255, 215, 0, 0.35);
+  --glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 215, 0, 0.3);
+  --gold-glow: 0 0 25px rgba(255, 215, 0, 0.5);
+  --gold-glow-intense: 0 0 45px rgba(255, 215, 0, 0.85);
+
+  --font-heading: 'Cinzel Decorative', 'Rozha One', serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-body: 'Poppins', sans-serif;
+
+  --nav-height: 80px;
+}
+
+/* Base Reset & Custom Scrollbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(139, 0, 0, 0.4) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 153, 51, 0.15) 0%, transparent 50%);
+  color: var(--cream);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-grad);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* Background Particle Canvas */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top Decorative Garland Border */
+.garland-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FF9933 0px,
+    #FF9933 20px,
+    #FFD700 20px,
+    #FFD700 40px,
+    #E85D75 40px,
+    #E85D75 60px
+  );
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.6);
+  z-index: 1002;
+}
+
+/* Fixed Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  height: calc(var(--nav-height) - 12px);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 40px;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.nav-brand span {
+  font-size: 1.6rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  padding: 10px 18px;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover {
+  color: var(--gold-primary);
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.nav-link.active {
+  color: #1F0508;
+  background: var(--gold-grad);
+  font-weight: 600;
+  box-shadow: var(--gold-glow);
+}
+
+/* Page Prev/Next Top Buttons */
+.nav-page-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-step-btn {
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 7px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-step-btn:hover {
+  background: var(--gold-grad);
+  color: #1F0508;
+  transform: translateY(-2px);
+  box-shadow: var(--gold-glow);
+}
+
+/* Mobile Hamburger Toggle */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--gold-primary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--gold-primary);
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+  text-align: center;
+}
+
+.mobile-menu-overlay.active {
+  display: flex;
+}
+
+/* Main Container & Section Spacing */
+.main-content {
+  position: relative;
+  z-index: 2;
+  padding-top: calc(var(--nav-height) + 30px);
+  padding-bottom: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  animation: pageFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Typography Headings & Subtitles */
+.festive-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  text-align: center;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.festive-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-align: center;
+  color: var(--saffron);
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Buttons System */
+.btn-festive {
+  background: var(--gold-grad);
+  color: #1F0508;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 36px;
+  border-radius: 50px;
+  border: 2px solid #FFF5B8;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-festive::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-festive:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+.btn-festive:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: var(--gold-glow-intense);
+}
+
+.btn-festive:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-secondary {
+  background: rgba(139, 0, 0, 0.6);
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-primary);
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-maroon);
+  box-shadow: var(--gold-glow);
+}
+
+/* Bottom Quick Page Nav Footer */
+.bottom-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ==========================================================================
+   PAGE 1: GREETING & SURPRISE ENVELOPE
+   ========================================================================== */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-art-container {
+  position: relative;
+  width: clamp(280px, 45vw, 480px);
+  height: clamp(280px, 45vw, 480px);
+  margin: 20px 0 35px;
+  border-radius: 50%;
+  padding: 15px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
+  box-shadow: var(--gold-glow-intense);
+  animation: floatHero 4s ease-in-out infinite;
+}
+
+@keyframes floatHero {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-art-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+}
+
+/* Envelope Modal Wish Popup */
+.wish-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 2, 4, 0.88);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.wish-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.envelope-card {
+  width: 90%;
+  max-width: 580px;
+  background: var(--maroon-grad);
+  border: 2px solid var(--gold-primary);
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+  text-align: center;
+  position: relative;
+  transform: scale(0.7) translateY(50px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wish-modal-overlay.active .envelope-card {
+  transform: scale(1) translateY(0);
+}
+
+.envelope-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  animation: pulseIcon 1.5s infinite;
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.letter-message {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--cream);
+  margin: 20px 0;
+  font-style: italic;
+  background: rgba(0,0,0,0.25);
+  padding: 20px;
+  border-radius: 16px;
+  border-left: 4px solid var(--gold-primary);
+}
+
+.letter-signature {
+  font-family: var(--font-cursive);
+  font-size: 2.2rem;
+  color: var(--gold-primary);
+  margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   PAGE 2: RAKHI SELECTION STUDIO & TYING ANIMATION
+   ========================================================================== */
+.rakhi-carousel-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.rakhi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.rakhi-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.rakhi-card:hover {
+  transform: translateY(-10px) rotateX(8deg);
+  border-color: var(--gold-primary);
+  box-shadow: var(--gold-glow);
+}
+
+.rakhi-card.selected {
+  border: 2px solid var(--gold-primary);
+  background: rgba(139, 0, 0, 0.85);
+  box-shadow: var(--gold-glow-intense);
+  transform: scale(1.05);
+}
+
+.selected-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gold-grad);
+  color: #1F0508;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: none;
+}
+
+.rakhi-card.selected .selected-badge {
+  display: block;
+}
+
+.rakhi-img-wrapper {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 15px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.rakhi-card:hover .rakhi-img-wrapper {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.rakhi-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+.rakhi-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  margin-bottom: 6px;
+}
+
+.rakhi-desc {
+  font-size: 0.85rem;
+  color: var(--cream);
+  opacity: 0.85;
+}
+
+/* Rakhi Tying Interactive Canvas / Wrist Section */
+.tying-section {
+  width: 100%;
+  max-width: 800px;
+  background: var(--glass-bg);
+  border: 2px solid var(--gold-primary);
+  border-radius: 30px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: var(--glass-shadow);
+}
+
+.wrist-preview-area {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.4) 0%, transparent 80%);
+}
+
+.wrist-illustration {
+  position: absolute;
+  width: 320px;
+  height: 120px;
+  background: linear-gradient(90deg, #D7CCC8 0%, #BCAAA4 50%, #8D6E63 100%);
+  border-radius: 60px;
+  box-shadow: inset 0 -6px 12px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.wrist-illustration::after {
+  content: '👤 Brother\'s Wrist';
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.tying-rakhi-object {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+  transition: all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tying-rakhi-object.tied {
+  transform: scale(1.1) translateY(0) !important;
+  filter: drop-shadow(0 0 25px #FFD700);
+}
+
+.tied-sparkles-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ==========================================================================
+   PAGE 3: ROTATING AARTI THALI & DIYA
+   ========================================================================== */
+.aarti-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: radial-gradient(ellipse at center, rgba(139, 0, 0, 0.5) 0%, rgba(15, 2, 4, 0.9) 80%);
+  border: 1px solid var(--glass-border);
+}
+
+/* Orbital Rotating Aarti Thali Container */
+.thali-orbital-path {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 260px;
+  margin-top: -130px;
+  margin-left: -180px;
+  pointer-events: none;
+}
+
+.aarti-thali-wrapper {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -130px;
+  cursor: grab;
+  z-index: 10;
+  transition: transform 0.1s linear;
+}
+
+.aarti-thali-wrapper:active {
+  cursor: grabbing;
+}
+
+.aarti-thali-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Orbit Animation Keyframes */
+.orbiting {
+  animation: orbitRotate 12s linear infinite;
+}
+
+.orbiting.speed-slow {
+  animation-duration: 20s;
+}
+
+.orbiting.speed-fast {
+  animation-duration: 6s;
+}
+
+@keyframes orbitRotate {
+  0% {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
+
+/* Controls Bar */
+.aarti-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.ctrl-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctrl-btn:hover, .ctrl-btn.active {
+  background: var(--gold-grad);
+  color: #1F0508;
+  box-shadow: var(--gold-glow);
+}
+
+/* Aarti Ceremony Banner */
+.aarti-blessing-banner {
+  background: var(--maroon-grad);
+  border: 2px solid var(--gold-primary);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  max-width: 750px;
+  margin-top: 30px;
+  box-shadow: var(--gold-glow);
+  display: none;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   PAGE 4: INTERACTIVE MITHAI PLATE
+   ========================================================================== */
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 40px;
+}
+
+.sweet-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sweet-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--gold-glow);
+}
+
+.sweet-img-box {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 12px;
+}
+
+.sweet-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+.sweet-name {
+  font-size: 1.1rem;
+  color: var(--gold-primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Interactive Sweets Plate Area */
+.mithai-thali-container {
+  width: 100%;
+  max-width: 700px;
+  background: var(--glass-bg);
+  border: 2px solid var(--gold-primary);
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--glass-shadow);
+}
+
+.decorative-plate {
+  width: 380px;
+  height: 380px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8B0000 0%, #4A0E17 60%, #DAA520 100%);
+  border: 12px solid var(--gold-primary);
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.6);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.plate-sweet-item {
+  width: 75px;
+  height: 75px;
+  cursor: grab;
+  animation: dropIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s ease;
+}
+
+.plate-sweet-item:hover {
+  transform: scale(1.2);
+}
+
+@keyframes dropIn {
+  from { transform: scale(0) rotate(-180deg); opacity: 0; }
+  to { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.sweets-counter-badge {
+  background: var(--gold-grad);
+  color: #1F0508;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Flying Sweet Animation Clones */
+.flying-sweet {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  z-index: 1500;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ==========================================================================
+   PAGE 5: FUNNY GIFT DEMAND & UNBOXING
+   ========================================================================== */
+.gift-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.check-item {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid var(--gold-primary);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: var(--gold-primary);
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+  margin-bottom: 40px;
+}
+
+.gift-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: var(--gold-primary);
+  box-shadow: var(--gold-glow);
+}
+
+.gift-card.selected {
+  border: 2px solid var(--gold-primary);
+  background: var(--bg-maroon);
+  box-shadow: var(--gold-glow-intense);
+}
+
+.gift-icon-box {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 10px;
+}
+
+.gift-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 3D Animated Gift Box Stage */
+.unboxing-stage {
+  width: 100%;
+  max-width: 650px;
+  background: var(--glass-bg);
+  border: 2px solid var(--gold-primary);
+  border-radius: 30px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+.gift-box-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.gift-box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.gift-box-wrapper.shake {
+  animation: shakeBox 0.6s ease-in-out infinite;
+}
+
+@keyframes shakeBox {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg) scale(1.05); }
+  40% { transform: rotate(8deg) scale(1.05); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(4deg); }
+}
+
+.revealed-gift-display {
+  display: none;
+  animation: burstOpen 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes burstOpen {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.revealed-gift-img {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 15px;
+  filter: drop-shadow(0 0 25px var(--gold-primary));
+}
+
+/* ==========================================================================
+   FLOATING MUSIC PLAYER WIDGET
+   ========================================================================== */
+.music-player-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--gold-primary);
+  border-radius: 50px;
+  padding: 10px 20px 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--glass-shadow);
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+.music-disc {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8B0000 0%, #1F0508 100%);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.music-disc.playing {
+  animation: spinDisc 4s linear infinite;
+}
+
+@keyframes spinDisc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+}
+
+.music-waves {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 12px;
+  margin-top: 3px;
+}
+
+.wave-bar {
+  width: 3px;
+  height: 3px;
+  background: var(--saffron);
+  border-radius: 2px;
+}
+
+.music-disc.playing ~ .music-info .wave-bar {
+  animation: waveAnim 1s ease-in-out infinite alternate;
+}
+
+.wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { animation-delay: 0.3s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes waveAnim {
+  0% { height: 3px; }
+  100% { height: 14px; background: var(--gold-primary); }
+}
+
+.play-toggle-btn {
+  background: var(--gold-grad);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #1F0508;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.play-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.volume-slider {
+  width: 60px;
+  accent-color: var(--gold-primary);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .festive-title {
+    font-size: 2.2rem;
+  }
+  .aarti-stage {
+    height: 420px;
+  }
+  .thali-orbital-path {
+    width: 280px;
+    height: 200px;
+    margin-left: -140px;
+    margin-top: -100px;
+  }
+  .aarti-thali-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+  }
+  .decorative-plate {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+  .music-player-widget {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 14px;
+  }
+}

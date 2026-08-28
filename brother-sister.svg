@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#FF9933" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#8B0000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4A0E17" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#DAA520"/>
+    </linearGradient>
+    <linearGradient id="sareeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E85D75"/>
+      <stop offset="50%" stop-color="#8B0000"/>
+      <stop offset="100%" stop-color="#4A0E17"/>
+    </linearGradient>
+    <linearGradient id="kurtaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDD0"/>
+      <stop offset="50%" stop-color="#FF9933"/>
+      <stop offset="100%" stop-color="#CC6600"/>
+    </linearGradient>
+    <radialGradient id="diyaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFFF66"/>
+      <stop offset="70%" stop-color="#FF9933"/>
+      <stop offset="100%" stop-color="#FF0000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Aura -->
+  <circle cx="400" cy="400" r="380" fill="url(#bgGlow)"/>
+
+  <!-- Outer Decorative Mandala Halo -->
+  <g stroke="url(#goldGrad)" stroke-width="2" fill="none" opacity="0.6">
+    <circle cx="400" cy="380" r="280" stroke-dasharray="8 6"/>
+    <circle cx="400" cy="380" r="260"/>
+    <circle cx="400" cy="380" r="240" stroke-dasharray="4 4"/>
+    <!-- Mandala Petals -->
+    <path d="M400,100 Q430,130 400,160 Q370,130 400,100 Z" fill="url(#goldGrad)" opacity="0.4"/>
+    <path d="M400,660 Q430,630 400,600 Q370,630 400,660 Z" fill="url(#goldGrad)" opacity="0.4"/>
+    <path d="M120,380 Q150,410 180,380 Q150,350 120,380 Z" fill="url(#goldGrad)" opacity="0.4"/>
+    <path d="M680,380 Q650,410 620,380 Q650,350 680,380 Z" fill="url(#goldGrad)" opacity="0.4"/>
+  </g>
+
+  <!-- Brother Figure -->
+  <g filter="url(#shadow)">
+    <path d="M220,700 C220,540 270,480 320,460 C370,480 390,520 400,700 Z" fill="url(#kurtaGrad)"/>
+    <path d="M310,470 L310,650 M325,470 L325,650" stroke="url(#goldGrad)" stroke-width="4"/>
+    <circle cx="315" cy="400" r="50" fill="#6D4C41"/>
+    <path d="M270,390 C270,340 360,340 360,390 C340,360 290,360 270,390 Z" fill="#2C1609"/>
+    <path d="M230,520 Q310,580 370,510" fill="none" stroke="url(#goldGrad)" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sister Figure -->
+  <g filter="url(#shadow)">
+    <path d="M400,700 C410,530 440,470 490,450 C550,470 590,540 600,700 Z" fill="url(#sareeGrad)"/>
+    <path d="M440,465 Q510,600 580,680" fill="none" stroke="url(#goldGrad)" stroke-width="12"/>
+    <circle cx="490" cy="390" r="46" fill="#8D6E63"/>
+    <path d="M445,390 C445,335 535,335 535,390 C520,350 460,350 445,390 Z" fill="#1B0000"/>
+    <circle cx="525" cy="370" r="10" fill="#FFFDD0"/>
+    <circle cx="535" cy="385" r="10" fill="#FFFDD0"/>
+    <circle cx="530" cy="400" r="10" fill="#FFFDD0"/>
+    <circle cx="475" cy="385" r="4" fill="#FFD700"/>
+  </g>
+
+  <!-- Aarti Thali Held -->
+  <g filter="url(#shadow)">
+    <ellipse cx="400" cy="580" rx="140" ry="45" fill="url(#goldGrad)"/>
+    <ellipse cx="400" cy="580" rx="125" ry="38" fill="#8B0000" opacity="0.3"/>
+    <ellipse cx="400" cy="580" rx="120" ry="35" fill="url(#goldGrad)" opacity="0.6"/>
+    
+    <path d="M370,575 Q400,595 430,575 Q400,565 370,575 Z" fill="#DAA520"/>
+    <ellipse cx="400" cy="550" rx="60" ry="60" fill="url(#diyaGlow)"/>
+    <path d="M395,570 Q400,535 405,570 Z" fill="#FFD700"/>
+    <path d="M397,570 Q400,545 403,570 Z" fill="#FFFFFF"/>
+
+    <circle cx="330" cy="580" r="12" fill="#E85D75"/>
+    <circle cx="345" cy="585" r="10" fill="#FF9933"/>
+    <circle cx="460" cy="580" r="10" fill="#FF0000"/>
+    <circle cx="475" cy="582" r="8" fill="#FFFDD0"/>
+  </g>
+
+  <!-- Floating Sparkles & Petals -->
+  <g fill="url(#goldGrad)">
+    <path d="M150,200 L155,215 L170,220 L155,225 L150,240 L145,225 L130,220 L145,215 Z"/>
+    <path d="M650,220 L654,230 L665,234 L654,238 L650,248 L646,238 L635,234 L646,230 Z"/>
+  </g>
+</svg>
